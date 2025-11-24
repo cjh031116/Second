@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/welcome"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/please_login"
+        android:textSize="18sp"
+        android:textColor="#999999"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edittext_background"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:minHeight="50dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="#999999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t1" />
+
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawableEnd="@drawable/ic_eye"
+        android:drawablePadding="12dp"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:minHeight="50dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColorHint="#999999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailInput" />
+
+    <TextView
+        android:id="@+id/forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/forget_password"
+        android:textColor="#007AFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_login_background"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/appleLoginBtn"
+        app:layout_constraintStart_toStartOf="@id/wechatLoginBtn"
+        app:layout_constraintTop_toBottomOf="@id/forgetPassword" />
+
+    <View
+        android:id="@+id/dividerLeft"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        android:background="#DDDDDD"
+        app:layout_constraintEnd_toStartOf="@id/orText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgetPassword" />
+
+    <TextView
+        android:id="@+id/orText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/or"
+        android:textColor="#999999"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/dividerLeft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dividerLeft" />
+
+    <View
+        android:id="@+id/dividerRight"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#DDDDDD"
+        app:layout_constraintBottom_toBottomOf="@id/dividerLeft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/orText"
+        app:layout_constraintTop_toTopOf="@id/dividerLeft" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/wechatLoginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_background"
+        android:drawableStart="@drawable/weixin_icon_resized"
+        android:drawablePadding="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/wechat_login"
+        android:textAllCaps="false"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toStartOf="@id/appleLoginBtn"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dividerLeft" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appleLoginBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_background"
+        android:drawablePadding="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/apple_login"
+        android:textAllCaps="false"
+        android:textColor="#333333"
+        android:drawableStart="@drawable/apple_icon_resized"
+        app:layout_constraintBaseline_toBaselineOf="@id/wechatLoginBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/wechatLoginBtn" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="还没有账户？ 立即注册"
+        android:textColor="#007AFF"
+        app:layout_constraintStart_toStartOf="@id/wechatLoginBtn"
+        app:layout_constraintTop_toBottomOf="@id/wechatLoginBtn"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
